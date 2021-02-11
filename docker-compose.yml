@@ -8,7 +8,7 @@ services:
     ports:
       - 5432:5432
     volumes:
-      - docker_postgres:/var/lib/postgresql/data
+      - ./docker_postgres:/var/lib/postgresql/data
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
