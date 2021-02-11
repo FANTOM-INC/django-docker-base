@@ -1,5 +1,10 @@
 # django-docker-base
-command
+
+1
+
+    docker-compose build
+
+2
 
     docker-compose run --rm web django-admin startproject djangoproject .
     
@@ -20,7 +25,8 @@ settings.py
     
     TIME_ZONE = 'Asia/Tokyo'
 
-command
+3
 
+    docker-compose run --rm web python manage.py makemigrations
     docker-compose run --rm web python manage.py migrate
     docker-compose run --rm web python manage.py createsuperuser
